@@ -48,6 +48,8 @@ global images
 images={}
 
 class TuxMathScrabbleApp:
+	"""A class tuxmathscrabbleapp that sets the initial level and mode of the game to a set valie.
+	"""
 
 	def __init__(self):
 
@@ -192,6 +194,7 @@ class TuxMathScrabble:
 		self.clock = pygame.time.Clock()
 
 	def handle_mouse(self):
+		"""A method that sets conditions for different buttons of the game"""
 		#for event in pygame.event.get():
 		#	print event
 		for event in pygame.event.get(MOUSEBUTTONDOWN):
@@ -289,6 +292,8 @@ class TuxMathScrabble:
 		return tile
 
 	def draw_tiles(self):
+		"""This part of the code handles the spots of the tiles of the 
+			tuxmathscrable game"""
 
 		spots=self.players[self.player_idx].tray.get_spots()
 
@@ -348,6 +353,8 @@ class TuxMathScrabble:
 		return operator,strval,ptval
 
 	def skip_turn(self):
+		"""this part of the code handles the skip function of the
+			tuxmathscrable game"""
 		self.throw_back_submission()
 		self.players[self.player_idx].actor.queue('go_back')
 		self.increment_player_idx()
@@ -383,6 +390,8 @@ class TuxMathScrabble:
 		if self.player_idx>1:self.player_idx=0
 
 	def shuffle(self):
+		"""This part of the code is in charge of the shuffle and return
+		function of the game"""
 		if DEBUG:print('K_F5: shuffle')
 		self.throw_back_submission()
 		numbers=[]

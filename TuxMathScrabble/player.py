@@ -16,6 +16,7 @@ import pygame
 from pygame.locals import *
 
 class Player(pygame.sprite.Sprite):
+	"""A class that constructs the name, tray actor and solver"""
 	def __init__(self,name,tray,actor,solver):
 		pygame.sprite.Sprite.__init__(self)
 
