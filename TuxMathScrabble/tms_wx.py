@@ -27,7 +27,7 @@ class TuxMathScrabbleAppWX(wx.App):
 		wx.App.__init__(self, 0)
 
 		mode=0
-		level=4
+		level=1 #changed default level from 4
 		use_default_level=True
 		while True:
 			prog=TuxMathScrabble(mode,level,use_default_level,True)
