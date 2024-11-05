@@ -44,6 +44,8 @@ class TMS_Validator:
 			if spot.M<=MinM and spot.N<=MinN:
 				MinM=spot.M
 				MinN=spot.N
+			if spot.M[0,4] >10 and spot.N[0,4] >10:
+				break
 		#print 'preliminary: MinM,MinN=',MinM,MinN
 
 		#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-

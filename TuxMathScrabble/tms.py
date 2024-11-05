@@ -298,7 +298,6 @@ class TuxMathScrabble:
 		spots=self.players[self.player_idx].tray.get_spots()
 
 		for spot in spots:
-
 			if spot.occupied():continue
 
 			if (spot.getMN()[1]<self.NNUMBERS):
